@@ -1,0 +1,9 @@
+{
+  "name": "FANRGB Activity",
+  "short_name": "FANRGB",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#0b1020",
+  "description": "Mobile GitHub activity dashboard for FANRGB"
+}
