@@ -3,19 +3,19 @@
   "blocker_active": false,
   "user_action_required": false,
   "title": "KEINE NUTZERAKTION ERFORDERLICH",
-  "message": "Der zuvor offene REAL-HARDWARE-RAM-OFF-Gate ist durch eine Produktarchitektur-Korrektur entfallen. RAM wird wie andere RGB-Komponenten behandelt; der gespeicherte Farbzustand wird beim Start einmal angewendet. Ein separater FanRGBRamGuard.exe --off-Akzeptanztest ist nicht mehr Teil der Sollarchitektur.",
-  "action": "Nächster technischer Schritt ist die RAM-Komponentenlogik auf den generischen Farbzustands-Pfad zu korrigieren: gespeicherten Zielwert (z. B. FFFFFF) beim Startup genau einmal anwenden und danach nur auf tatsächliche Zustandsänderungen reagieren. Kein separater RAM-OFF-Hardwaretest und keine Nutzeraktion erforderlich.",
+  "message": "RigWeave Multi-Worker bleibt fail-closed gegated. Der jüngste REAL-Windows-Zwei-Worker-Livenesslauf ist fehlgeschlagen; automatische Domain-Worker-Dispatches bleiben deaktiviert, bis der geforderte REAL-Liveness-PASS vorliegt.",
+  "action": "Keine Nutzeraktion erforderlich. Die Live-Chat-Walker-/Release-Lane bleibt isoliert; der nächste Dispatcher-Schritt muss aus der vorhandenen Fehlerdiagnostik abgeleitet und ausschließlich über den erlaubten Live-Walker ausgeführt werden.",
   "director": {
     "status": "ACTIVE",
-    "detail": "RigWeave orchestration healthy; release lane remains isolated; RAM special-off gate superseded by generic component-state architecture",
-    "updated_at": "2026-09-16T11:58:00Z"
+    "detail": "RigWeave orchestration reviewed; release lane isolated; multi-worker dispatcher remains fail-closed after latest REAL liveness failure",
+    "updated_at": "2026-09-16T12:29:33Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
-    "detail": "0 active uniquely routed workers; Opera GX isolation/High evidence exists, but RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS is still required before automatic dispatch",
-    "updated_at": "2026-09-16T11:20:41Z"
+    "detail": "0 active uniquely routed workers; latest two-worker REAL liveness gate failed, so automatic multi-worker dispatch remains disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
+    "updated_at": "2026-09-16T12:29:33Z"
   },
-  "updated_at": "2026-09-16T11:58:00Z"
+  "updated_at": "2026-09-16T12:29:33Z"
 }
