@@ -1,53 +1,53 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T18:55:10.5083363+00:00",
-    "blocker_active":  true,
+    "updated_at":  "2026-09-16T19:11:05.2676286+00:00",
+    "blocker_active":  false,
     "user_action_required":  false,
-    "title":  "ChatGPT cooldown",
-    "message":  "Worker-UI-Zugriffe sind vorÃ¼bergehend pausiert.",
-    "action":  "Keine Nutzeraktion erforderlich.",
+    "title":  null,
+    "message":  null,
+    "action":  null,
     "director":  {
                      "name":  "Director",
-                     "state":  "COOLDOWN",
-                     "last_activity":  "2026-09-16T18:42:48.8260266Z",
-                     "activity":  "Cooldown",
+                     "state":  "ACTIVE",
+                     "last_activity":  "2026-09-16T19:05:26.8361969Z",
+                     "activity":  "Review",
                      "task":  "ORCH-REVIEW-WAKE"
                  },
     "workers":  {
-                    "active":  0,
+                    "active":  4,
                     "capacity":  5,
                     "items":  [
                                   {
                                       "id":  "core-platform",
                                       "name":  "Core Platform",
-                                      "state":  "COOLDOWN",
+                                      "state":  "ACTIVE",
                                       "last_activity":  "2026-09-16T17:32:34.8371362Z",
                                       "task":  "CONTRACT-002",
-                                      "activity":  "Cooldown"
+                                      "activity":  "Working"
                                   },
                                   {
                                       "id":  "display-studio",
                                       "name":  "Display Studio",
-                                      "state":  "COOLDOWN",
+                                      "state":  "ACTIVE",
                                       "last_activity":  "2026-09-16T18:25:09.6296451Z",
                                       "task":  null,
-                                      "activity":  "Cooldown"
+                                      "activity":  "Working"
                                   },
                                   {
                                       "id":  "lighting",
                                       "name":  "Lighting",
-                                      "state":  "COOLDOWN",
+                                      "state":  "ACTIVE",
                                       "last_activity":  "2026-09-16T17:16:40.9640767Z",
                                       "task":  "LIGHT-002",
-                                      "activity":  "Cooldown"
+                                      "activity":  "Working"
                                   },
                                   {
                                       "id":  "sensors-cooling",
                                       "name":  "Sensors \u0026 Cooling",
-                                      "state":  "COOLDOWN",
+                                      "state":  "ACTIVE",
                                       "last_activity":  "2026-09-16T18:18:10.3798621Z",
                                       "task":  "SENSOR-002",
-                                      "activity":  "Cooldown"
+                                      "activity":  "Working"
                                   },
                                   {
                                       "id":  "platform-services",
