@@ -1,27 +1,26 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-16T19:31:42Z",
-  "blocker_active": true,
-  "user_action_required": false,
-  "title": "Orchestrierung fail-closed",
-  "message": "Persistent worker routing is awaiting authoritative session/send-state reconciliation. Assignment/DAG state is not counted as current Activity work without fresh runtime generation evidence.",
-  "action": "Keine Nutzeraktion erforderlich. Keine Worker-Duplikate oder Resends bis zur eindeutigen Registry-Reconciliation.",
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-16T19:34:00Z",
-  "director": {
-    "status": "RECONCILE",
-    "detail": "Director orchestration state exists, but no current runtime-generation evidence is available through the queued Windows status path.",
-    "updated_at": "2026-09-16T19:31:42Z"
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "state": "DEGRADED_FAIL_CLOSED",
-    "detail": "LIGHT-002 remains a DAG assignment but is not reported as currently working without fresh generation evidence. DEVICE-002/GUARD-002 send state is unverified; AUTO-002 remains ambiguous. Runtime active count is therefore fail-closed at 0.",
-    "updated_at": "2026-09-16T19:31:42Z"
-  },
-  "runtime_feed_stale": true,
-  "stale_detected_at": "2026-09-16T19:40:36.169190Z",
-  "status_semantics": "STALE runtime snapshot: old ACTIVE states are not treated as current work."
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-16T20:11:06.2800809+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  null,
+                     "activity":  "Idle",
+                     "task":  null,
+                     "session_open":  false,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  0,
+                    "items":  [
+
+                              ]
+                }
 }
