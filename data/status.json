@@ -1,62 +1,63 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T19:11:05.2676286+00:00",
-    "blocker_active":  false,
-    "user_action_required":  false,
-    "title":  null,
-    "message":  null,
-    "action":  null,
-    "director":  {
-                     "name":  "Director",
-                     "state":  "ACTIVE",
-                     "last_activity":  "2026-09-16T19:05:26.8361969Z",
-                     "activity":  "Review",
-                     "task":  "ORCH-REVIEW-WAKE"
-                 },
-    "workers":  {
-                    "active":  4,
-                    "capacity":  5,
-                    "items":  [
-                                  {
-                                      "id":  "core-platform",
-                                      "name":  "Core Platform",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T17:32:34.8371362Z",
-                                      "task":  "CONTRACT-002",
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "display-studio",
-                                      "name":  "Display Studio",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T18:25:09.6296451Z",
-                                      "task":  null,
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "lighting",
-                                      "name":  "Lighting",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T17:16:40.9640767Z",
-                                      "task":  "LIGHT-002",
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "sensors-cooling",
-                                      "name":  "Sensors \u0026 Cooling",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T18:18:10.3798621Z",
-                                      "task":  "SENSOR-002",
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "platform-services",
-                                      "name":  "Platform Services",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T15:32:20.4152752Z",
-                                      "task":  null,
-                                      "activity":  "Idle"
-                                  }
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v3",
+  "updated_at": "2026-09-16T19:11:05.2676286+00:00",
+  "status_semantics": "STALE snapshot: no worker is reported ACTIVE when the Windows runtime status feed is not current.",
+  "blocker_active": true,
+  "user_action_required": false,
+  "title": "Runtime-Status veraltet",
+  "message": "Der self-hosted Windows-Statusfeed ist seit 19:11 UTC nicht aktuell. Alte offene Worker-Sessions werden nicht mehr als aktive Arbeit gewertet.",
+  "action": "Keine Nutzeraktion erforderlich. Orchestrierungs-/Runner-Zustand wird fail-closed behandelt.",
+  "director": {
+    "name": "Director",
+    "state": "STALE",
+    "last_activity": "2026-09-16T19:05:26.8361969Z",
+    "activity": "Status feed stale",
+    "task": "ORCH-REVIEW-WAKE"
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 5,
+    "items": [
+      {
+        "id": "core-platform",
+        "name": "Core Platform",
+        "state": "STALE",
+        "last_activity": "2026-09-16T17:32:34.8371362Z",
+        "task": "CONTRACT-002",
+        "activity": "Terminal task in DAG; stale runtime snapshot"
+      },
+      {
+        "id": "display-studio",
+        "name": "Display Studio",
+        "state": "STALE",
+        "last_activity": "2026-09-16T18:25:09.6296451Z",
+        "task": null,
+        "activity": "Terminal task in DAG; stale runtime snapshot"
+      },
+      {
+        "id": "lighting",
+        "name": "Lighting",
+        "state": "STALE",
+        "last_activity": "2026-09-16T17:16:40.9640767Z",
+        "task": "LIGHT-002",
+        "activity": "Assignment unresolved; no current generation evidence"
+      },
+      {
+        "id": "sensors-cooling",
+        "name": "Sensors & Cooling",
+        "state": "STALE",
+        "last_activity": "2026-09-16T18:18:10.3798621Z",
+        "task": "SENSOR-002",
+        "activity": "Terminal task in DAG; stale runtime snapshot"
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "STALE",
+        "last_activity": "2026-09-16T15:32:20.4152752Z",
+        "task": null,
+        "activity": "Stale runtime snapshot"
+      }
+    ]
+  }
 }
