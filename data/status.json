@@ -1,21 +1,62 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-16T18:32:42Z",
-  "blocker_active": false,
-  "user_action_required": false,
-  "title": null,
-  "message": null,
-  "action": null,
-  "director": {
-    "status": "ACTIVE",
-    "detail": "Review-first orchestration active. DISPLAY-002 is ready for Director/QA review; LIGHT-002 remains the only confirmed active domain assignment. Release/support lane remains separately gated.",
-    "updated_at": "2026-09-16T18:32:42Z"
-  },
-  "workers": {
-    "active": 1,
-    "capacity": 4,
-    "state": "ACTIVE",
-    "detail": "1/4 genuinely active persistent worker assignment: Lighting / LIGHT-002. DISPLAY-002 is READY_FOR_REVIEW and does not consume an active slot; terminal or closed-resumable sessions are excluded.",
-    "updated_at": "2026-09-16T18:32:42Z"
-  }
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-16T18:39:54.8119773+00:00",
+    "blocker_active":  true,
+    "user_action_required":  false,
+    "title":  "ChatGPT cooldown",
+    "message":  "Worker-UI-Zugriffe sind vorÃ¼bergehend pausiert.",
+    "action":  "Keine Nutzeraktion erforderlich.",
+    "director":  {
+                     "name":  "Director",
+                     "state":  "COOLDOWN",
+                     "last_activity":  "2026-09-16T18:23:21.6151461Z",
+                     "activity":  "Cooldown",
+                     "task":  "ORCH-REVIEW-WAKE"
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  5,
+                    "items":  [
+                                  {
+                                      "id":  "core-platform",
+                                      "name":  "Core Platform",
+                                      "state":  "COOLDOWN",
+                                      "last_activity":  "2026-09-16T17:32:34.8371362Z",
+                                      "task":  "CONTRACT-002",
+                                      "activity":  "Cooldown"
+                                  },
+                                  {
+                                      "id":  "display-studio",
+                                      "name":  "Display Studio",
+                                      "state":  "COOLDOWN",
+                                      "last_activity":  "2026-09-16T18:25:09.6296451Z",
+                                      "task":  null,
+                                      "activity":  "Cooldown"
+                                  },
+                                  {
+                                      "id":  "lighting",
+                                      "name":  "Lighting",
+                                      "state":  "COOLDOWN",
+                                      "last_activity":  "2026-09-16T17:16:40.9640767Z",
+                                      "task":  "LIGHT-002",
+                                      "activity":  "Cooldown"
+                                  },
+                                  {
+                                      "id":  "sensors-cooling",
+                                      "name":  "Sensors \u0026 Cooling",
+                                      "state":  "COOLDOWN",
+                                      "last_activity":  "2026-09-16T18:18:10.3798621Z",
+                                      "task":  "SENSOR-002",
+                                      "activity":  "Cooldown"
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T15:32:20.4152752Z",
+                                      "task":  null,
+                                      "activity":  "Idle"
+                                  }
+                              ]
+                }
 }
