@@ -2,9 +2,9 @@
   "schema": "rigweave-activity-status-v2",
   "blocker_active": true,
   "user_action_required": true,
-  "title": "NUTZER-AKTION ERFORDERLICH",
-  "message": "Die hardware-freie PawnIO/SMBus-Optionalisierung ist REAL Windows PASS (95/0). Offen ist genau eine reale RAM-OFF-Hardwareakzeptanz. Dieser Test würde den bereits verifizierten FanRGBRamGuard.exe --off-Pfad ausführen und begrenzte SMBus-Schreiboperationen durchführen.",
-  "action": "Für die Ausführung ist deine ausdrückliche Freigabe für genau einen begrenzten REAL-HARDWARE-RAM-OFF-Test erforderlich. Ohne ausdrückliche Freigabe wird kein Hardware-Schreibtest gestartet.",
+  "title": "REAL-HARDWARE-TESTZIEL FEHLT",
+  "message": "Die Freigabe für genau einen begrenzten REAL-HARDWARE-RAM-OFF-Test liegt vor. Der Worker-Laptop besitzt laut Nutzer jedoch keinen RGB-RAM und überhaupt keine RGB-Komponenten. Damit kann er den positiven RAM-OFF-Schreib-/Readback-Test nicht erfüllen; dort wird kein SMBus-Schreibversuch gestartet.",
+  "action": "Für die noch offene positive RAM-OFF-Akzeptanz wird ein Windows-Testziel mit kompatiblem RGB-RAM/unterstütztem Controller benötigt. Bis ein solches Testziel verfügbar ist, bleibt die hardware-freie Optionalisierung bei REAL Windows PASS 95/0 und es erfolgt keine SMBus-Schreiboperation.",
   "director": {
     "status": "ACTIVE",
     "detail": "RigWeave orchestration healthy; release lane remains isolated; multi-worker liveness gate is not yet proven",
@@ -17,5 +17,5 @@
     "detail": "0 active uniquely routed workers; Opera GX isolation/High evidence exists, but RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS is still required before automatic dispatch",
     "updated_at": "2026-09-16T11:20:41Z"
   },
-  "updated_at": "2026-09-16T11:33:20Z"
+  "updated_at": "2026-09-16T11:50:00Z"
 }
