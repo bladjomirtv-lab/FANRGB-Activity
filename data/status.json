@@ -1,63 +1,21 @@
 {
-  "schema": "rigweave-activity-status-v3",
-  "updated_at": "2026-09-16T19:11:05.2676286+00:00",
-  "status_semantics": "STALE snapshot: no worker is reported ACTIVE when the Windows runtime status feed is not current.",
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-16T19:31:42Z",
   "blocker_active": true,
   "user_action_required": false,
-  "title": "Runtime-Status veraltet",
-  "message": "Der self-hosted Windows-Statusfeed ist seit 19:11 UTC nicht aktuell. Alte offene Worker-Sessions werden nicht mehr als aktive Arbeit gewertet.",
-  "action": "Keine Nutzeraktion erforderlich. Orchestrierungs-/Runner-Zustand wird fail-closed behandelt.",
+  "title": "Orchestrierung fail-closed",
+  "message": "Persistent worker routing is awaiting authoritative session/send-state reconciliation; no unverified READY task is counted as ACTIVE.",
+  "action": "Keine Nutzeraktion erforderlich. Keine Worker-Duplikate oder Resends bis zur eindeutigen Registry-Reconciliation.",
   "director": {
-    "name": "Director",
-    "state": "STALE",
-    "last_activity": "2026-09-16T19:05:26.8361969Z",
-    "activity": "Status feed stale",
-    "task": "ORCH-REVIEW-WAKE"
+    "status": "ACTIVE",
+    "detail": "Release/runtime SSOT is healthy: P0.5 closed REAL PASS; active software P1 is package slimming/reputation. RigWeave orchestration remains fail-closed because DEVICE-002/GUARD-002 dispatch outcome and one unregistered Opera window are unresolved; no resend authorized.",
+    "updated_at": "2026-09-16T19:31:42Z"
   },
   "workers": {
-    "active": 0,
-    "capacity": 5,
-    "items": [
-      {
-        "id": "core-platform",
-        "name": "Core Platform",
-        "state": "STALE",
-        "last_activity": "2026-09-16T17:32:34.8371362Z",
-        "task": "CONTRACT-002",
-        "activity": "Terminal task in DAG; stale runtime snapshot"
-      },
-      {
-        "id": "display-studio",
-        "name": "Display Studio",
-        "state": "STALE",
-        "last_activity": "2026-09-16T18:25:09.6296451Z",
-        "task": null,
-        "activity": "Terminal task in DAG; stale runtime snapshot"
-      },
-      {
-        "id": "lighting",
-        "name": "Lighting",
-        "state": "STALE",
-        "last_activity": "2026-09-16T17:16:40.9640767Z",
-        "task": "LIGHT-002",
-        "activity": "Assignment unresolved; no current generation evidence"
-      },
-      {
-        "id": "sensors-cooling",
-        "name": "Sensors & Cooling",
-        "state": "STALE",
-        "last_activity": "2026-09-16T18:18:10.3798621Z",
-        "task": "SENSOR-002",
-        "activity": "Terminal task in DAG; stale runtime snapshot"
-      },
-      {
-        "id": "platform-services",
-        "name": "Platform Services",
-        "state": "STALE",
-        "last_activity": "2026-09-16T15:32:20.4152752Z",
-        "task": null,
-        "activity": "Stale runtime snapshot"
-      }
-    ]
+    "active": 1,
+    "capacity": 3,
+    "state": "DEGRADED_FAIL_CLOSED",
+    "detail": "LIGHT-002 is the only DAG task with confirmed ACTIVE persistent-session dispatch. DEVICE-002 and GUARD-002 remain READY with unverified send state; AUTO-002 remains READY/ineligible pending unregistered-window reconciliation. Terminal/closed_resumable sessions are not counted active.",
+    "updated_at": "2026-09-16T19:31:42Z"
   }
 }
