@@ -1,0 +1,32 @@
+{
+    "schema":  "rigweave-context-health-v1",
+    "generated_at":  "2026-09-16T23:04:45.1451350+00:00",
+    "status":  "pass",
+    "critical_count":  0,
+    "warning_count":  0,
+    "metrics":  {
+                    "prompt_chars":  4345,
+                    "director_plan_chars":  2460,
+                    "router_chars":  8130,
+                    "policy_chars":  2511,
+                    "deprecated_full_ssot_recovery_hits":  0,
+                    "duplicated_governance_phrase_hits":  0
+                },
+    "thresholds":  {
+                       "normal_domain_recovery_soft_tokens":  8000,
+                       "normal_domain_recovery_slimming_trigger_tokens":  12000,
+                       "estimated_chars_per_token":  4,
+                       "prompt_soft_chars":  12000,
+                       "deep_window_hours":  6
+                   },
+    "audit":  {
+                  "kind":  "STATIC_HYGIENE",
+                  "source_ref":  "infra/windows-test-worker",
+                  "source_sha":  "640108197d6595b20c42964679b837440c76abed",
+                  "path_local_non_blocking":  true,
+                  "deep_audit_state":  "NONE_CONFIRMED"
+              },
+    "findings":  [
+
+                 ]
+}
