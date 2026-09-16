@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T18:05:04.7024003+00:00",
+    "updated_at":  "2026-09-16T18:21:25.1299267+00:00",
     "blocker_active":  false,
     "user_action_required":  false,
     "title":  null,
@@ -9,13 +9,13 @@
     "director":  {
                      "name":  "Director",
                      "state":  "ACTIVE",
-                     "last_activity":  "2026-09-16T17:29:03.7427482Z",
+                     "last_activity":  "2026-09-16T18:16:09.1039213Z",
                      "activity":  "Review",
                      "task":  "ORCH-REVIEW-WAKE"
                  },
     "workers":  {
-                    "active":  2,
-                    "capacity":  3,
+                    "active":  3,
+                    "capacity":  4,
                     "items":  [
                                   {
                                       "id":  "core-platform",
@@ -31,6 +31,14 @@
                                       "state":  "ACTIVE",
                                       "last_activity":  "2026-09-16T17:16:40.9640767Z",
                                       "task":  "LIGHT-002",
+                                      "activity":  "Working"
+                                  },
+                                  {
+                                      "id":  "sensors-cooling",
+                                      "name":  "Sensors \u0026 Cooling",
+                                      "state":  "ACTIVE",
+                                      "last_activity":  "2026-09-16T18:18:10.3798621Z",
+                                      "task":  "SENSOR-002",
                                       "activity":  "Working"
                                   },
                                   {
