@@ -7,15 +7,15 @@
   "action": "Keine Aktion erforderlich.",
   "director": {
     "status": "ACTIVE",
-    "detail": "RigWeave orchestration active; multi-worker gate in validation",
-    "updated_at": "2026-09-16T09:54:00Z"
+    "detail": "RigWeave orchestration active; Opera GX High REAL PASS; two-worker liveness validation running",
+    "updated_at": "2026-09-16T10:34:21Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
-    "detail": "0 aktiv · High/Prompt-Liveness-Gate noch nicht freigegeben",
-    "updated_at": "2026-09-16T09:54:00Z"
+    "detail": "0 aktiv · High REAL PASS · finaler Zwei-Worker-Prompt/Liveness-Gate läuft",
+    "updated_at": "2026-09-16T10:34:21Z"
   },
-  "updated_at": "2026-09-16T09:54:00Z"
+  "updated_at": "2026-09-16T10:34:21Z"
 }
