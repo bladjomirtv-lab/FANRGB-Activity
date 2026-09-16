@@ -17,5 +17,8 @@
     "state": "RECONCILIATION_BLOCKED",
     "detail": "No current generating worker can be proven from fresh runtime evidence. LIGHT-002 remains assigned ACTIVE in the DAG but is not counted as runtime-active. AUTO-002, DEVICE-002 and GUARD-002 remain fail-closed pending persistent-session reconciliation; REMOTE-002 and SERVICE-002 remain READY.",
     "updated_at": "2026-09-16T20:32:00Z"
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-16T20:33:09.012175Z"
 }
