@@ -1,8 +1,21 @@
 {
+  "schema": "rigweave-activity-status-v2",
   "blocker_active": false,
   "user_action_required": false,
   "title": "Kein Nutzer-Blocker",
   "message": "Aktuell ist keine Nutzeraktion erforderlich.",
   "action": "Keine Aktion erforderlich.",
-  "updated_at": "2026-09-16T07:13:44Z"
+  "director": {
+    "status": "ACTIVE",
+    "detail": "RigWeave orchestration active; multi-worker gate in validation",
+    "updated_at": "2026-09-16T09:54:00Z"
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 3,
+    "state": "GATED",
+    "detail": "0 aktiv · High/Prompt-Liveness-Gate noch nicht freigegeben",
+    "updated_at": "2026-09-16T09:54:00Z"
+  },
+  "updated_at": "2026-09-16T09:54:00Z"
 }
