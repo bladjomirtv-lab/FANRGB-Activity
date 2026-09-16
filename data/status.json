@@ -17,5 +17,8 @@
     "state": "IDLE",
     "detail": "Fresh Activity runtime evidence reports no worker currently generating. LIGHT-002 remains a nonterminal DAG assignment, but assignment state alone is not published as active runtime work. READY tasks remain queued behind session/send-state reconciliation.",
     "updated_at": "2026-09-16T21:30:33Z"
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-16T21:31:32.080282Z"
 }
