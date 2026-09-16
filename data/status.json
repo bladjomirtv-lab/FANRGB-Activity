@@ -7,15 +7,15 @@
   "action": "Keine Nutzeraktion erforderlich. Die Live-Chat-Walker-/Release-Lane bleibt isoliert; Dispatcher-REAL-Ausführung bleibt ausschließlich beim erlaubten Live Chat Walker.",
   "director": {
     "status": "ACTIVE",
-    "detail": "Release/support lane and RigWeave DAG reviewed; release lane isolated; CORE-001 is READY_FOR_REVIEW; multi-worker dispatcher remains fail-closed pending REAL liveness PASS",
-    "updated_at": "2026-09-16T14:13:29Z"
+    "detail": "Release/support lane and RigWeave DAG reviewed; P1 package slimming remains the release/runtime workpoint; five domain drafts are READY_FOR_REVIEW, while LIGHT-001, DEVICE-001 and SERVICE-001 remain READY; multi-worker dispatcher remains fail-closed pending REAL liveness PASS",
+    "updated_at": "2026-09-16T14:59:29Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
-    "detail": "0 active uniquely routed workers; READY domain tasks are not counted active; automatic multi-worker dispatch disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
-    "updated_at": "2026-09-16T14:13:29Z"
+    "detail": "0 active uniquely routed workers; READY/READY_FOR_REVIEW domain tasks are not counted active; automatic multi-worker dispatch disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
+    "updated_at": "2026-09-16T14:59:29Z"
   },
-  "updated_at": "2026-09-16T14:13:29Z"
+  "updated_at": "2026-09-16T14:59:29Z"
 }
