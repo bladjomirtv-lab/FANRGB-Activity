@@ -8,14 +8,14 @@
   "director": {
     "status": "ACTIVE",
     "detail": "RigWeave orchestration reviewed; release lane isolated; multi-worker dispatcher remains fail-closed after latest REAL liveness failure",
-    "updated_at": "2026-09-16T12:29:33Z"
+    "updated_at": "2026-09-16T12:53:45Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
     "detail": "0 active uniquely routed workers; latest two-worker REAL liveness gate failed, so automatic multi-worker dispatch remains disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
-    "updated_at": "2026-09-16T12:29:33Z"
+    "updated_at": "2026-09-16T12:53:45Z"
   },
-  "updated_at": "2026-09-16T12:29:33Z"
+  "updated_at": "2026-09-16T12:53:45Z"
 }
