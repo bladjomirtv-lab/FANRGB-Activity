@@ -1,0 +1,8 @@
+{
+  "blocker_active": true,
+  "user_action_required": true,
+  "title": "Blocker aktiv",
+  "message": "FANRGB wartet auf eine Nutzeraktion, bevor der Ablauf fortgesetzt werden kann.",
+  "action": "Details und die erforderliche Aktion stehen im aktuellen FANRGB-Chat.",
+  "updated_at": "2026-09-16T06:09:00Z"
+}
