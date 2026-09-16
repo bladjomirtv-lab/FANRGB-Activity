@@ -1,0 +1,61 @@
+name: RigWeave Context Health Sanity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/context-health.json
+      - index.html
+      - .github/workflows/rigweave-context-health-sanity.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rigweave-context-health-sanity
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Validate public Context Health schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          p=Path('data/context-health.json')
+          h=json.loads(p.read_text(encoding='utf-8-sig'))
+          required={'schema','generated_at','status','critical_count','warning_count','metrics','thresholds','audit','findings'}
+          allowed=required
+          if set(h)!=allowed:
+              raise SystemExit(f'CONTEXT_HEALTH_TOP_LEVEL_KEYS_INVALID extra={sorted(set(h)-allowed)} missing={sorted(required-set(h))}')
+          if h['schema']!='rigweave-context-health-v1':
+              raise SystemExit('CONTEXT_HEALTH_SCHEMA_INVALID')
+          if h['status'] not in {'pass','warning','critical'}:
+              raise SystemExit('CONTEXT_HEALTH_STATUS_INVALID')
+          metrics=h['metrics'] or {}
+          allowed_metrics={'prompt_chars','director_plan_chars','router_chars','policy_chars','deprecated_full_ssot_recovery_hits','duplicated_governance_phrase_hits'}
+          if set(metrics)-allowed_metrics:
+              raise SystemExit(f'CONTEXT_HEALTH_METRICS_UNEXPECTED {sorted(set(metrics)-allowed_metrics)}')
+          audit=h['audit'] or {}
+          if audit.get('source_ref')!='infra/windows-test-worker':
+              raise SystemExit('CONTEXT_HEALTH_SOURCE_REF_INVALID')
+          if audit.get('path_local_non_blocking') is not True:
+              raise SystemExit('CONTEXT_HEALTH_BLOCKING_SEMANTICS_INVALID')
+          text=Path('index.html').read_text(encoding='utf-8')
+          for marker in ('Context Health','./data/context-health.json','healthState','healthFindings'):
+              if marker not in text:
+                  raise SystemExit('CONTEXT_HEALTH_UI_MARKER_MISSING '+marker)
+          serialized=json.dumps(h,ensure_ascii=False).lower()
+          for forbidden in ('authorization: bearer','password','secret=','api_key','private key'):
+              if forbidden in serialized:
+                  raise SystemExit('CONTEXT_HEALTH_PUBLIC_DATA_FORBIDDEN_TOKEN '+forbidden)
+          print(f"RIGWEAVE_CONTEXT_HEALTH_PUBLIC_SANITY_PASS status={h['status']} critical={h['critical_count']} warning={h['warning_count']}")
+          PY
