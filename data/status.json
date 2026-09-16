@@ -3,19 +3,19 @@
   "blocker_active": false,
   "user_action_required": false,
   "title": "KEINE NUTZERAKTION ERFORDERLICH",
-  "message": "RigWeave Multi-Worker bleibt fail-closed gegated. Der jüngste REAL-Windows-Zwei-Worker-Livenesslauf ist fehlgeschlagen; automatische Domain-Worker-Dispatches bleiben deaktiviert, bis der geforderte REAL-Liveness-PASS vorliegt.",
-  "action": "Keine Nutzeraktion erforderlich. Die Live-Chat-Walker-/Release-Lane bleibt isoliert; der nächste Dispatcher-Schritt muss aus der vorhandenen Fehlerdiagnostik abgeleitet und ausschließlich über den erlaubten Live-Walker ausgeführt werden.",
+  "message": "RigWeave Multi-Worker bleibt fail-closed gegated. Automatische Domain-Worker-Dispatches bleiben deaktiviert, bis RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS vorliegt.",
+  "action": "Keine Nutzeraktion erforderlich. Die Live-Chat-Walker-/Release-Lane bleibt isoliert; Dispatcher-REAL-Ausführung bleibt ausschließlich beim erlaubten Live Chat Walker.",
   "director": {
     "status": "ACTIVE",
-    "detail": "RigWeave orchestration reviewed; release lane isolated; multi-worker dispatcher remains fail-closed after latest REAL liveness failure",
-    "updated_at": "2026-09-16T12:53:45Z"
+    "detail": "Release/support lane and RigWeave DAG reviewed; release lane isolated; CORE-001 is READY_FOR_REVIEW; multi-worker dispatcher remains fail-closed pending REAL liveness PASS",
+    "updated_at": "2026-09-16T14:13:29Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
-    "detail": "0 active uniquely routed workers; latest two-worker REAL liveness gate failed, so automatic multi-worker dispatch remains disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
-    "updated_at": "2026-09-16T12:53:45Z"
+    "detail": "0 active uniquely routed workers; READY domain tasks are not counted active; automatic multi-worker dispatch disabled pending RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS",
+    "updated_at": "2026-09-16T14:13:29Z"
   },
-  "updated_at": "2026-09-16T12:53:45Z"
+  "updated_at": "2026-09-16T14:13:29Z"
 }
