@@ -1,12 +1,12 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T23:07:17.6378497+00:00",
+    "updated_at":  "2026-09-16T23:20:21.2852287+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
-    "blocker_active":  true,
+    "blocker_active":  false,
     "user_action_required":  false,
-    "title":  "ChatGPT cooldown",
-    "message":  "Worker-UI-Zugriffe sind vorÃ¼bergehend pausiert.",
-    "action":  "Keine Nutzeraktion erforderlich.",
+    "title":  null,
+    "message":  null,
+    "action":  null,
     "director":  {
                      "name":  "Director",
                      "state":  "IDLE",
@@ -18,9 +18,38 @@
                  },
     "workers":  {
                     "active":  0,
-                    "capacity":  0,
+                    "capacity":  3,
                     "items":  [
-
+                                  {
+                                      "id":  "automation-scenes",
+                                      "name":  "Automation",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:10:37.5631944Z",
+                                      "task":  "AUTO-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "osd-remote",
+                                      "name":  "OSD \u0026 Remote",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:11:38.2713807Z",
+                                      "task":  "REMOTE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:12:37.9628592Z",
+                                      "task":  "SERVICE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  }
                               ]
                 }
 }
