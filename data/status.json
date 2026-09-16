@@ -1,46 +1,21 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T17:21:31.6738630+00:00",
-    "blocker_active":  false,
-    "user_action_required":  false,
-    "title":  null,
-    "message":  null,
-    "action":  null,
-    "director":  {
-                     "name":  "Director",
-                     "state":  "ACTIVE",
-                     "last_activity":  "2026-09-16T17:09:02.5945000Z",
-                     "activity":  "Review",
-                     "task":  "ORCH-REVIEW-WAKE"
-                 },
-    "workers":  {
-                    "active":  2,
-                    "capacity":  3,
-                    "items":  [
-                                  {
-                                      "id":  "core-platform",
-                                      "name":  "Core Platform",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T17:14:47.3559875Z",
-                                      "task":  "CONTRACT-002",
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "lighting",
-                                      "name":  "Lighting",
-                                      "state":  "ACTIVE",
-                                      "last_activity":  "2026-09-16T17:16:40.9640767Z",
-                                      "task":  "LIGHT-002",
-                                      "activity":  "Working"
-                                  },
-                                  {
-                                      "id":  "platform-services",
-                                      "name":  "Platform Services",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T15:32:20.4152752Z",
-                                      "task":  null,
-                                      "activity":  "Idle"
-                                  }
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-16T17:34:55Z",
+  "blocker_active": false,
+  "user_action_required": false,
+  "title": null,
+  "message": null,
+  "action": null,
+  "director": {
+    "status": "ACTIVE",
+    "detail": "Review-first orchestration: CONTRACT-002 correction and LIGHT-002 are the only genuinely active persistent worker tasks; release/support lane remains separately authorized for production deployment prep.",
+    "updated_at": "2026-09-16T17:34:55Z"
+  },
+  "workers": {
+    "active": 2,
+    "capacity": 3,
+    "state": "ACTIVE",
+    "detail": "Core Platform CONTRACT-002 correction and Lighting LIGHT-002 are active in uniquely routed persistent sessions. READY tasks and closed_resumable sessions are not counted active.",
+    "updated_at": "2026-09-16T17:34:55Z"
+  }
 }
