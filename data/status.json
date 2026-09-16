@@ -1,21 +1,21 @@
 {
   "schema": "rigweave-activity-status-v2",
-  "blocker_active": false,
+  "blocker_active": true,
   "user_action_required": false,
-  "title": "KEINE NUTZERAKTION ERFORDERLICH",
-  "message": "RigWeave persistent worker routing is active. The Windows session registry was read-only verified against live Opera GX HWNDs after the current dispatch wave.",
-  "action": "Keine Nutzeraktion erforderlich. Produktions-, Release- und Hardware-Schreibfreigaben bleiben separat gesperrt.",
+  "title": "AUTOMATISCHER CHATGPT-COOLDOWN AKTIV",
+  "message": "ChatGPT hat den Zugriff auf Unterhaltungen wegen zu vieler Zugriffe vorübergehend eingeschränkt. RigWeave hat deshalb den gesamten Worker-UI-Dispatch fail-closed pausiert. Es werden während des Cooldowns keine neuen Chats, Tabs oder Worker-Sitzungen geöffnet.",
+  "action": "Keine Nutzeraktion erforderlich. Der aktuelle Schutz-Cooldown läuft mindestens bis 2026-09-16T16:11:52Z; danach bleiben globale Rate-Limits und Backoff aktiv.",
   "director": {
-    "status": "ACTIVE",
-    "detail": "INT-001 Contract Freeze 0 is running in the persistent Director session. HWND 2621754 was verified as a live Opera GX window; activation rw-director-int-001-20260916t153806846z-0af179e265ff was sent once and its session remains active.",
-    "updated_at": "2026-09-16T15:47:10Z"
+    "status": "ACTIVE_COOLDOWN",
+    "detail": "Die bestehende INT-001 Director-Sitzung bleibt registriert; neue ChatGPT-UI-Zugriffe des Directors sind während des globalen Cooldowns gesperrt.",
+    "updated_at": "2026-09-16T15:56:52Z"
   },
   "workers": {
     "active": 1,
     "capacity": 3,
-    "state": "ACTIVE",
-    "detail": "1 genuinely ACTIVE domain worker: Lighting / LIGHT-001. Its persistent Opera GX HWND 6555196 is live. Director/INT is shown separately above; total verified active persistent sessions = 2.",
-    "updated_at": "2026-09-16T15:47:10Z"
+    "state": "COOLDOWN",
+    "detail": "Lighting / LIGHT-001 bleibt als bestehende aktive persistente Sitzung registriert. Neue Worker-Starts und Session-Resumes sind global gesperrt. Dauerhafte Policy: mindestens 120 s Abstand, maximal 3 ChatGPT-UI-Zugriffe pro 10 Minuten, 15 Minuten Cooldown nach UI-Fehlern, exponentieller Backoff bis 60 Minuten.",
+    "updated_at": "2026-09-16T15:56:52Z"
   },
-  "updated_at": "2026-09-16T15:47:10Z"
+  "updated_at": "2026-09-16T15:56:52Z"
 }
