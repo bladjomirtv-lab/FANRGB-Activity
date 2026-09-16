@@ -1,24 +1,26 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-16T21:30:33Z",
-  "blocker_active": false,
-  "user_action_required": false,
-  "title": null,
-  "message": null,
-  "action": null,
-  "director": {
-    "status": "RECONCILING",
-    "detail": "Release/runtime lane is on package slimming while the separately authorized production gate remains protected. RigWeave orchestration is fail-closed pending persistent-session/send-state reconciliation for AUTO-002 and DEVICE-002/GUARD-002; no speculative resend is permitted.",
-    "updated_at": "2026-09-16T21:30:33Z"
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "state": "IDLE",
-    "detail": "Fresh Activity runtime evidence reports no worker currently generating. LIGHT-002 remains a nonterminal DAG assignment, but assignment state alone is not published as active runtime work. READY tasks remain queued behind session/send-state reconciliation.",
-    "updated_at": "2026-09-16T21:30:33Z"
-  },
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-16T21:31:32.080282Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-16T21:41:47.5854859+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  null,
+                     "activity":  "Idle",
+                     "task":  null,
+                     "session_open":  false,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  0,
+                    "items":  [
+
+                              ]
+                }
 }
