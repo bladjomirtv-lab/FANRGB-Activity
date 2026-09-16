@@ -1,9 +1,9 @@
 {
-  "name": "FANRGB Activity",
-  "short_name": "FANRGB",
+  "name": "RigWeave Activity",
+  "short_name": "RigWeave",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#070b14",
   "theme_color": "#0b1020",
-  "description": "Mobile GitHub activity dashboard for FANRGB"
+  "description": "Mobile orchestration and GitHub activity dashboard for RigWeave"
 }
