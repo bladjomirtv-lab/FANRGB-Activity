@@ -1,0 +1,83 @@
+name: RigWeave Runtime Status Sanity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/status.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rigweave-runtime-status-sanity
+  cancel-in-progress: true
+
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Fail assignment-only ACTIVE states closed
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          p=Path('data/status.json')
+          status=json.loads(p.read_text(encoding='utf-8-sig'))
+          workers=status.get('workers') or {}
+          items=workers.get('items')
+          semantics=str(status.get('status_semantics') or '')
+          trusted=(status.get('schema')=='rigweave-activity-status-v3' and isinstance(items,list) and 'current ChatGPT generation' in semantics)
+          if trusted:
+              print('RIGWEAVE_ACTIVITY_STATUS_TRUSTED_RUNTIME_V3')
+              raise SystemExit(0)
+
+          changed=False
+          if int(workers.get('active') or 0) != 0:
+              workers['active']=0
+              changed=True
+          if str(workers.get('state') or '').upper()=='ACTIVE':
+              workers['state']='RECONCILE'
+              changed=True
+
+          director=status.get('director') or {}
+          if str(director.get('state') or '').upper()=='ACTIVE':
+              director['state']='RECONCILE'
+              changed=True
+          if str(director.get('status') or '').upper()=='ACTIVE':
+              director['status']='RECONCILE'
+              changed=True
+
+          marker='Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.'
+          if status.get('runtime_feed_authority') != marker:
+              status['runtime_feed_authority']=marker
+              changed=True
+          if status.get('runtime_feed_sanitized') is not True:
+              status['runtime_feed_sanitized']=True
+              changed=True
+          if not changed:
+              print('RIGWEAVE_ACTIVITY_STATUS_ALREADY_FAIL_CLOSED')
+              raise SystemExit(0)
+          status['runtime_feed_sanitized_at']=datetime.now(timezone.utc).isoformat().replace('+00:00','Z')
+          p.write_text(json.dumps(status,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print('RIGWEAVE_ACTIVITY_STATUS_SANITIZED active=0')
+          PY
+
+      - name: Commit sanitized status if changed
+        run: |
+          if git diff --quiet -- data/status.json; then
+            echo "No status sanitization required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/status.json
+          git commit -m "fix: sanitize assignment-only activity status"
+          git push origin HEAD:main
