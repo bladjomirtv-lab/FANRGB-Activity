@@ -7,15 +7,15 @@
   "action": "Keine Aktion erforderlich.",
   "director": {
     "status": "ACTIVE",
-    "detail": "RigWeave orchestration active; Opera GX High REAL PASS; two-worker liveness validation running",
-    "updated_at": "2026-09-16T10:34:21Z"
+    "detail": "RigWeave orchestration healthy; release lane remains isolated; multi-worker liveness gate is not yet proven",
+    "updated_at": "2026-09-16T11:20:41Z"
   },
   "workers": {
     "active": 0,
     "capacity": 3,
     "state": "GATED",
-    "detail": "0 aktiv · High REAL PASS · finaler Zwei-Worker-Prompt/Liveness-Gate läuft",
-    "updated_at": "2026-09-16T10:34:21Z"
+    "detail": "0 active uniquely routed workers; Opera GX isolation/High evidence exists, but RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS is still required before automatic dispatch",
+    "updated_at": "2026-09-16T11:20:41Z"
   },
-  "updated_at": "2026-09-16T10:34:21Z"
+  "updated_at": "2026-09-16T11:20:41Z"
 }
