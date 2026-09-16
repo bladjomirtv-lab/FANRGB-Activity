@@ -3,19 +3,19 @@
   "blocker_active": false,
   "user_action_required": false,
   "title": "KEINE NUTZERAKTION ERFORDERLICH",
-  "message": "RigWeave orchestration is healthy and fail-closed. Persistent-session Router V2 has STATIC and bounded REAL lifecycle PASS; persistent end-to-end send/URL-capture and PC-pool REAL gates remain pending and are not treated as ACTIVE workers.",
-  "action": "Keine Nutzeraktion erforderlich. Release/runtime work remains package slimming; production deployment remains separately gated by explicit authorization.",
+  "message": "RigWeave persistent worker routing is active. The Windows session registry was read-only verified against live Opera GX HWNDs after the current dispatch wave.",
+  "action": "Keine Nutzeraktion erforderlich. Produktions-, Release- und Hardware-Schreibfreigaben bleiben separat gesperrt.",
   "director": {
     "status": "ACTIVE",
-    "detail": "Technical SSOT and both Board lanes reviewed. P1 package slimming remains the single release/runtime workpoint. RigWeave domain drafts are queued for review/integration; INT-001 remains blocked pending prerequisite reviews. Router V2 persistent-session lifecycle evidence is accepted only at its stated level; no competing Windows/runner action was started.",
-    "updated_at": "2026-09-16T15:34:21Z"
+    "detail": "INT-001 Contract Freeze 0 is running in the persistent Director session. HWND 2621754 was verified as a live Opera GX window; activation rw-director-int-001-20260916t153806846z-0af179e265ff was sent once and its session remains active.",
+    "updated_at": "2026-09-16T15:47:10Z"
   },
   "workers": {
-    "active": 0,
+    "active": 1,
     "capacity": 3,
-    "state": "GATED",
-    "detail": "0 genuinely ACTIVE uniquely routed persistent worker sessions. READY, READY_FOR_REVIEW and closed_resumable sessions are not counted active. CHATROUTER-001 still requires bounded persistent end-to-end send/URL-capture before canonical enable; PCPOOL-001 REAL concurrency remains pending.",
-    "updated_at": "2026-09-16T15:34:21Z"
+    "state": "ACTIVE",
+    "detail": "1 genuinely ACTIVE domain worker: Lighting / LIGHT-001. Its persistent Opera GX HWND 6555196 is live. Director/INT is shown separately above; total verified active persistent sessions = 2.",
+    "updated_at": "2026-09-16T15:47:10Z"
   },
-  "updated_at": "2026-09-16T15:34:21Z"
+  "updated_at": "2026-09-16T15:47:10Z"
 }
