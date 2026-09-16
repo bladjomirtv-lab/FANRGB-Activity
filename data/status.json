@@ -1,21 +1,38 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "blocker_active": true,
-  "user_action_required": false,
-  "title": "AUTOMATISCHER CHATGPT-COOLDOWN AKTIV",
-  "message": "ChatGPT hat den Zugriff auf Unterhaltungen wegen zu vieler Zugriffe vorübergehend eingeschränkt. RigWeave hat deshalb den gesamten Worker-UI-Dispatch fail-closed pausiert. Es werden während des Cooldowns keine neuen Chats, Tabs oder Worker-Sitzungen geöffnet.",
-  "action": "Keine Nutzeraktion erforderlich. Der aktuelle Schutz-Cooldown läuft mindestens bis 2026-09-16T16:11:52Z; danach bleiben globale Rate-Limits und Backoff aktiv.",
-  "director": {
-    "status": "ACTIVE_COOLDOWN",
-    "detail": "Die bestehende INT-001 Director-Sitzung bleibt registriert; neue ChatGPT-UI-Zugriffe des Directors sind während des globalen Cooldowns gesperrt.",
-    "updated_at": "2026-09-16T15:56:52Z"
-  },
-  "workers": {
-    "active": 1,
-    "capacity": 3,
-    "state": "COOLDOWN",
-    "detail": "Lighting / LIGHT-001 bleibt als bestehende aktive persistente Sitzung registriert. Neue Worker-Starts und Session-Resumes sind global gesperrt. Dauerhafte Policy: mindestens 120 s Abstand, maximal 3 ChatGPT-UI-Zugriffe pro 10 Minuten, 15 Minuten Cooldown nach UI-Fehlern, exponentieller Backoff bis 60 Minuten.",
-    "updated_at": "2026-09-16T15:56:52Z"
-  },
-  "updated_at": "2026-09-16T15:56:52Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-16T16:55:33.5184411+00:00",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "ACTIVE",
+                     "last_activity":  "2026-09-16T16:45:35.8016895Z",
+                     "activity":  "Review",
+                     "task":  "ORCH-REVIEW-WAKE"
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  2,
+                    "items":  [
+                                  {
+                                      "id":  "lighting",
+                                      "name":  "Lighting",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T15:36:31.9058583Z",
+                                      "task":  "LIGHT-001",
+                                      "activity":  "Idle"
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T15:32:20.4152752Z",
+                                      "task":  null,
+                                      "activity":  "Idle"
+                                  }
+                              ]
+                }
 }
