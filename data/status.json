@@ -1,26 +1,21 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-16T20:30:53.8479432+00:00",
-    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
-    "blocker_active":  false,
-    "user_action_required":  false,
-    "title":  null,
-    "message":  null,
-    "action":  null,
-    "director":  {
-                     "name":  "Director",
-                     "state":  "IDLE",
-                     "last_activity":  null,
-                     "activity":  "Idle",
-                     "task":  null,
-                     "session_open":  false,
-                     "generating":  false
-                 },
-    "workers":  {
-                    "active":  0,
-                    "capacity":  0,
-                    "items":  [
-
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-16T20:32:00Z",
+  "blocker_active": false,
+  "user_action_required": false,
+  "title": null,
+  "message": null,
+  "action": null,
+  "director": {
+    "status": "RECONCILIATION_BLOCKED",
+    "detail": "RigWeave domain dispatch is fail-closed: the latest read-only persistent-session registry check completed with SESSION_REGISTRY_MISSING, so DEVICE-002/GUARD-002 send state and AUTO-002 window ownership cannot be safely reconciled. No speculative resend or new worker session is permitted.",
+    "updated_at": "2026-09-16T20:32:00Z"
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 3,
+    "state": "RECONCILIATION_BLOCKED",
+    "detail": "No current generating worker can be proven from fresh runtime evidence. LIGHT-002 remains assigned ACTIVE in the DAG but is not counted as runtime-active. AUTO-002, DEVICE-002 and GUARD-002 remain fail-closed pending persistent-session reconciliation; REMOTE-002 and SERVICE-002 remain READY.",
+    "updated_at": "2026-09-16T20:32:00Z"
+  }
 }
