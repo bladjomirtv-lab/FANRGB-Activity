@@ -1,10 +1,10 @@
 {
   "schema": "rigweave-activity-status-v2",
-  "blocker_active": false,
-  "user_action_required": false,
-  "title": "Kein Nutzer-Blocker",
-  "message": "Aktuell ist keine Nutzeraktion erforderlich.",
-  "action": "Keine Aktion erforderlich.",
+  "blocker_active": true,
+  "user_action_required": true,
+  "title": "NUTZER-AKTION ERFORDERLICH",
+  "message": "Die hardware-freie PawnIO/SMBus-Optionalisierung ist REAL Windows PASS (95/0). Offen ist genau eine reale RAM-OFF-Hardwareakzeptanz. Dieser Test würde den bereits verifizierten FanRGBRamGuard.exe --off-Pfad ausführen und begrenzte SMBus-Schreiboperationen durchführen.",
+  "action": "Für die Ausführung ist deine ausdrückliche Freigabe für genau einen begrenzten REAL-HARDWARE-RAM-OFF-Test erforderlich. Ohne ausdrückliche Freigabe wird kein Hardware-Schreibtest gestartet.",
   "director": {
     "status": "ACTIVE",
     "detail": "RigWeave orchestration healthy; release lane remains isolated; multi-worker liveness gate is not yet proven",
@@ -17,5 +17,5 @@
     "detail": "0 active uniquely routed workers; Opera GX isolation/High evidence exists, but RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS is still required before automatic dispatch",
     "updated_at": "2026-09-16T11:20:41Z"
   },
-  "updated_at": "2026-09-16T11:20:41Z"
+  "updated_at": "2026-09-16T11:33:20Z"
 }
