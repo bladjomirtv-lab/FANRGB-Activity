@@ -1,29 +1,26 @@
-{
-  "schema": "rigweave-activity-status-v3",
-  "updated_at": "2026-09-16T20:53:08.9961555+00:00",
-  "status_semantics": "STALE runtime snapshot: old ACTIVE states are not treated as current work.",
-  "blocker_active": false,
-  "user_action_required": false,
-  "title": null,
-  "message": null,
-  "action": null,
-  "director": {
-    "name": "Director",
-    "state": "IDLE",
-    "last_activity": null,
-    "activity": "Idle",
-    "task": null,
-    "session_open": false,
-    "generating": false
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 0,
-    "items": []
-  },
-  "runtime_feed_stale": true,
-  "stale_detected_at": "2026-09-16T21:08:58.271697Z",
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-16T21:09:05.085253Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-16T21:11:00.0666605+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  null,
+                     "activity":  "Idle",
+                     "task":  null,
+                     "session_open":  false,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  0,
+                    "items":  [
+
+                              ]
+                }
 }
