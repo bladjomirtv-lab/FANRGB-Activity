@@ -1,14 +1,14 @@
 {
   "schema": "rigweave-activity-status-v2",
-  "blocker_active": true,
-  "user_action_required": true,
-  "title": "REAL-HARDWARE-TESTZIEL FEHLT",
-  "message": "Die Freigabe für genau einen begrenzten REAL-HARDWARE-RAM-OFF-Test liegt vor. Der Worker-Laptop besitzt laut Nutzer jedoch keinen RGB-RAM und überhaupt keine RGB-Komponenten. Damit kann er den positiven RAM-OFF-Schreib-/Readback-Test nicht erfüllen; dort wird kein SMBus-Schreibversuch gestartet.",
-  "action": "Für die noch offene positive RAM-OFF-Akzeptanz wird ein Windows-Testziel mit kompatiblem RGB-RAM/unterstütztem Controller benötigt. Bis ein solches Testziel verfügbar ist, bleibt die hardware-freie Optionalisierung bei REAL Windows PASS 95/0 und es erfolgt keine SMBus-Schreiboperation.",
+  "blocker_active": false,
+  "user_action_required": false,
+  "title": "KEINE NUTZERAKTION ERFORDERLICH",
+  "message": "Der zuvor offene REAL-HARDWARE-RAM-OFF-Gate ist durch eine Produktarchitektur-Korrektur entfallen. RAM wird wie andere RGB-Komponenten behandelt; der gespeicherte Farbzustand wird beim Start einmal angewendet. Ein separater FanRGBRamGuard.exe --off-Akzeptanztest ist nicht mehr Teil der Sollarchitektur.",
+  "action": "Nächster technischer Schritt ist die RAM-Komponentenlogik auf den generischen Farbzustands-Pfad zu korrigieren: gespeicherten Zielwert (z. B. FFFFFF) beim Startup genau einmal anwenden und danach nur auf tatsächliche Zustandsänderungen reagieren. Kein separater RAM-OFF-Hardwaretest und keine Nutzeraktion erforderlich.",
   "director": {
     "status": "ACTIVE",
-    "detail": "RigWeave orchestration healthy; release lane remains isolated; multi-worker liveness gate is not yet proven",
-    "updated_at": "2026-09-16T11:20:41Z"
+    "detail": "RigWeave orchestration healthy; release lane remains isolated; RAM special-off gate superseded by generic component-state architecture",
+    "updated_at": "2026-09-16T11:58:00Z"
   },
   "workers": {
     "active": 0,
@@ -17,5 +17,5 @@
     "detail": "0 active uniquely routed workers; Opera GX isolation/High evidence exists, but RIGWEAVE_MULTI_CHAT_LIVENESS_REAL_PASS is still required before automatic dispatch",
     "updated_at": "2026-09-16T11:20:41Z"
   },
-  "updated_at": "2026-09-16T11:50:00Z"
+  "updated_at": "2026-09-16T11:58:00Z"
 }
