@@ -1,45 +1,55 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-17T11:08:28Z",
-  "blocker_active": true,
-  "user_action_required": false,
-  "title": "Chat router isolation gate open",
-  "message": "CHATROUTER-001 remains ACTIVE. Domain CDP dispatch is blocked until a bounded synthetic multi-worker gate proves distinct ChatGPT conversation URLs. Prior collided domain sends are not counted as independent active workers and must not be blindly resent.",
-  "action": "Router repair/validation only; no domain dispatch until isolation acceptance.",
-  "director": {
-    "name": "RigWeave Director",
-    "state": "RECONCILE",
-    "activity": "Reviewing routing isolation and completed domain handoffs",
-    "task": "CHATROUTER-001"
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "items": [
-      {
-        "id": "automation-scenes",
-        "name": "Automation & Scenes",
-        "state": "READY_FOR_REVIEW",
-        "task": "AUTO-002",
-        "activity": "Result exists; independent routing attribution requires Director reconciliation"
-      },
-      {
-        "id": "osd-remote",
-        "name": "OSD & Remote",
-        "state": "READY_FOR_REVIEW",
-        "task": "REMOTE-002",
-        "activity": "Result exists; independent routing attribution requires Director reconciliation"
-      },
-      {
-        "id": "platform-services",
-        "name": "Platform Services",
-        "state": "READY_FOR_REVIEW",
-        "task": "SERVICE-002",
-        "activity": "Result exists; independent routing attribution requires Director reconciliation"
-      }
-    ]
-  },
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-17T11:09:40.447614Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-17T11:16:57.8191797+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  "2026-09-16T22:38:59.7684309Z",
+                     "activity":  "Idle",
+                     "task":  "ORCH-REVIEW-WAKE",
+                     "session_open":  true,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  3,
+                    "items":  [
+                                  {
+                                      "id":  "automation-scenes",
+                                      "name":  "Automation",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:34:34.2538495Z",
+                                      "task":  "AUTO-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "osd-remote",
+                                      "name":  "OSD \u0026 Remote",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:35:35.8475892Z",
+                                      "task":  "REMOTE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:36:43.2818771Z",
+                                      "task":  "SERVICE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  }
+                              ]
+                }
 }
