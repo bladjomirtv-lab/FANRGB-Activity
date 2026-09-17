@@ -9,7 +9,7 @@
   "action": "Await fail-closed router uniqueness validation; no user action required.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Governance review",
     "task": "CHATROUTER-001",
     "session_open": true,
@@ -47,5 +47,8 @@
         "generating": false
       }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T07:47:15.866347Z"
 }
