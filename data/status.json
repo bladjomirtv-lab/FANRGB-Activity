@@ -25,12 +25,63 @@
     "active": 0,
     "capacity": 6,
     "items": [
-      {"id":"automation-scenes","name":"Automation","state":"IDLE","task":"AUTO-002","activity":"DONE; idle","session_open":false,"generating":false},
-      {"id":"device-ecosystem","name":"Device Ecosystem","state":"IDLE","task":"DEVICE-002","activity":"Assignment dispatched; architecture result pending; no current generation observed.","session_open":false,"generating":false},
-      {"id":"guardian-monitoring","name":"Guardian","state":"IDLE","task":"GUARD-002","activity":"DONE; idle","session_open":false,"generating":false},
-      {"id":"lighting","name":"Lighting","state":"IDLE","task":"LIGHT-002","activity":"DONE; idle","session_open":false,"generating":false},
-      {"id":"osd-remote","name":"OSD & Remote","state":"IDLE","task":"REMOTE-002","activity":"DONE; idle","session_open":false,"generating":false},
-      {"id":"platform-services","name":"Platform Services","state":"IDLE","task":"SERVICE-002","activity":"DONE; idle","session_open":false,"generating":false}
+      {
+        "id": "automation-scenes",
+        "name": "Automation",
+        "state": "IDLE",
+        "task": "AUTO-002",
+        "activity": "DONE; idle",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "device-ecosystem",
+        "name": "Device Ecosystem",
+        "state": "IDLE",
+        "task": "DEVICE-002",
+        "activity": "Assignment dispatched; architecture result pending; no current generation observed.",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "guardian-monitoring",
+        "name": "Guardian",
+        "state": "IDLE",
+        "task": "GUARD-002",
+        "activity": "DONE; idle",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "lighting",
+        "name": "Lighting",
+        "state": "IDLE",
+        "task": "LIGHT-002",
+        "activity": "DONE; idle",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "osd-remote",
+        "name": "OSD & Remote",
+        "state": "IDLE",
+        "task": "REMOTE-002",
+        "activity": "DONE; idle",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "IDLE",
+        "task": "SERVICE-002",
+        "activity": "DONE; idle",
+        "session_open": false,
+        "generating": false
+      }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T16:14:53.738242Z"
 }
