@@ -8,7 +8,7 @@
   "action": "Wait for the protected cooldown path and a later bounded synthetic uniqueness gate; do not resend collided domain activations.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Routing blocker governance",
     "task": "CHATROUTER-001"
   },
@@ -38,5 +38,8 @@
         "activity": "Confirmed prior send; not independently attributable; no resend"
       }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T06:30:37.520846Z"
 }
