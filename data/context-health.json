@@ -1,6 +1,6 @@
 {
     "schema":  "rigweave-context-health-v1",
-    "generated_at":  "2026-09-17T09:17:14.6158777+00:00",
+    "generated_at":  "2026-09-17T09:24:11.9640005+00:00",
     "status":  "pass",
     "critical_count":  0,
     "warning_count":  0,
@@ -23,7 +23,7 @@
     "audit":  {
                   "kind":  "STATIC_HYGIENE",
                   "source_ref":  "infra/windows-test-worker",
-                  "source_sha":  "b1a0c7340b775156e43a5b3b80861c6ae21010f8",
+                  "source_sha":  "9da3bfefb320aac8835257a769de5ec7ac061fba",
                   "path_local_non_blocking":  true,
                   "deep_audit_state":  "NONE_CONFIRMED"
               },
