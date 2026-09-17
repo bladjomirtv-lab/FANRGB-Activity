@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T14:50:26.1705037+00:00",
+    "updated_at":  "2026-09-17T14:55:09.9876216+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
@@ -54,10 +54,10 @@
                                       "id":  "lighting",
                                       "name":  "Lighting",
                                       "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T17:16:41.1185550Z",
+                                      "last_activity":  "2026-09-17T14:53:38.7944442Z",
                                       "task":  "LIGHT-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
                                       "generating":  false
                                   },
                                   {
