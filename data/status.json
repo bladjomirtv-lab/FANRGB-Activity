@@ -1,85 +1,36 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T15:59:22.3390771+00:00",
-    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
-    "blocker_active":  false,
-    "user_action_required":  false,
-    "title":  null,
-    "message":  null,
-    "action":  null,
-    "director":  {
-                     "name":  "Director",
-                     "state":  "IDLE",
-                     "last_activity":  "2026-09-17T15:09:05.8596164Z",
-                     "activity":  "Idle",
-                     "task":  "ORCH-REVIEW-WAKE",
-                     "session_open":  false,
-                     "generating":  false
-                 },
-    "workers":  {
-                    "active":  0,
-                    "capacity":  6,
-                    "items":  [
-                                  {
-                                      "id":  "automation-scenes",
-                                      "name":  "Automation",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:34:34.2538495Z",
-                                      "task":  "AUTO-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "device-ecosystem",
-                                      "name":  "Device Ecosystem",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T14:21:54.2805324Z",
-                                      "task":  "DEVICE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "guardian-monitoring",
-                                      "name":  "Guardian",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T14:22:57.3982416Z",
-                                      "task":  "GUARD-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "lighting",
-                                      "name":  "Lighting",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T17:16:41.1185550Z",
-                                      "task":  "LIGHT-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "osd-remote",
-                                      "name":  "OSD \u0026 Remote",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:35:35.8475892Z",
-                                      "task":  "REMOTE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "platform-services",
-                                      "name":  "Platform Services",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:36:43.2818771Z",
-                                      "task":  "SERVICE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  }
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-17T16:13:39Z",
+  "status_semantics": "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+  "blocker_active": false,
+  "user_action_required": false,
+  "title": null,
+  "message": null,
+  "action": null,
+  "director": {
+    "name": "Director",
+    "state": "IDLE",
+    "activity": "No reviewable completion or user-action blocker; DEVICE-002 result remains pending.",
+    "task": "ORCH-REVIEW-WAKE",
+    "session_open": false,
+    "generating": false
+  },
+  "routing": {
+    "task": "CHATROUTER-001",
+    "state": "DONE",
+    "accepted_evidence": "REAL persistent multi-worker isolation and same-worker resume accepted; domain routing is no longer blocked.",
+    "domain_dispatch_blocked": false
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 6,
+    "items": [
+      {"id":"automation-scenes","name":"Automation","state":"IDLE","task":"AUTO-002","activity":"DONE; idle","session_open":false,"generating":false},
+      {"id":"device-ecosystem","name":"Device Ecosystem","state":"IDLE","task":"DEVICE-002","activity":"Assignment dispatched; architecture result pending; no current generation observed.","session_open":false,"generating":false},
+      {"id":"guardian-monitoring","name":"Guardian","state":"IDLE","task":"GUARD-002","activity":"DONE; idle","session_open":false,"generating":false},
+      {"id":"lighting","name":"Lighting","state":"IDLE","task":"LIGHT-002","activity":"DONE; idle","session_open":false,"generating":false},
+      {"id":"osd-remote","name":"OSD & Remote","state":"IDLE","task":"REMOTE-002","activity":"DONE; idle","session_open":false,"generating":false},
+      {"id":"platform-services","name":"Platform Services","state":"IDLE","task":"SERVICE-002","activity":"DONE; idle","session_open":false,"generating":false}
+    ]
+  }
 }
