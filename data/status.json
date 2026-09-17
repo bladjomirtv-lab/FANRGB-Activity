@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T14:08:51.9204736+00:00",
+    "updated_at":  "2026-09-17T14:27:26.7849063+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
@@ -10,7 +10,7 @@
     "director":  {
                      "name":  "Director",
                      "state":  "IDLE",
-                     "last_activity":  "2026-09-17T14:07:32.1246008Z",
+                     "last_activity":  "2026-09-17T14:20:58.5904709Z",
                      "activity":  "Idle",
                      "task":  "ORCH-REVIEW-WAKE",
                      "session_open":  false,
@@ -18,7 +18,7 @@
                  },
     "workers":  {
                     "active":  0,
-                    "capacity":  3,
+                    "capacity":  5,
                     "items":  [
                                   {
                                       "id":  "automation-scenes",
@@ -28,6 +28,26 @@
                                       "task":  "AUTO-002",
                                       "activity":  "Idle",
                                       "session_open":  false,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "device-ecosystem",
+                                      "name":  "Device Ecosystem",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T14:21:54.2805324Z",
+                                      "task":  "DEVICE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "guardian-monitoring",
+                                      "name":  "Guardian",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T14:22:57.3982416Z",
+                                      "task":  "GUARD-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
                                       "generating":  false
                                   },
                                   {
