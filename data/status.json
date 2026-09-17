@@ -1,50 +1,55 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-17T08:46:44Z",
-  "blocker_active": true,
-  "user_action_required": false,
-  "title": "CHATROUTER-001 active",
-  "message": "Dedicated worker conversation isolation remains unaccepted. Latest bounded synthetic REAL gate failed after one confirmed send because the new conversation URL could not be confirmed; domain dispatch remains blocked.",
-  "action": "Patch conversation-ID/URL capture and revalidate with bounded synthetic workers only. Do not resend AUTO-002, REMOTE-002 or SERVICE-002 as probes.",
-  "director": {
-    "name": "Director",
-    "state": "RECONCILE",
-    "activity": "Routing isolation review",
-    "task": "CHATROUTER-001"
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "items": [
-      {
-        "id": "automation-scenes",
-        "name": "Automation",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "task": "AUTO-002"
-      },
-      {
-        "id": "osd-remote",
-        "name": "OSD & Remote",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "task": "REMOTE-002"
-      },
-      {
-        "id": "platform-services",
-        "name": "Platform Services",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "task": "SERVICE-002"
-      }
-    ]
-  },
-  "routing": {
-    "task": "CHATROUTER-001",
-    "state": "ACTIVE",
-    "latest_real_gate_run": 35188441051,
-    "latest_real_gate_result": "FAIL_NEW_CONVERSATION_URL_NOT_CONFIRMED",
-    "domain_dispatch_allowed": false,
-    "collided_sessions_counted_active": false
-  },
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-17T08:47:36.384251Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-17T08:48:35.5484178+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  "2026-09-16T22:38:59.7684309Z",
+                     "activity":  "Idle",
+                     "task":  "ORCH-REVIEW-WAKE",
+                     "session_open":  true,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  3,
+                    "items":  [
+                                  {
+                                      "id":  "automation-scenes",
+                                      "name":  "Automation",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:10:37.5631944Z",
+                                      "task":  "AUTO-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "osd-remote",
+                                      "name":  "OSD \u0026 Remote",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:11:38.2713807Z",
+                                      "task":  "REMOTE-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:12:37.9628592Z",
+                                      "task":  "SERVICE-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  }
+                              ]
+                }
 }
