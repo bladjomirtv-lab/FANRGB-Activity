@@ -8,7 +8,7 @@
   "action": "No user action required. Await the bounded synthetic uniqueness gate after the existing cooldown.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Routing blocker governance",
     "task": "CHATROUTER-001"
   },
@@ -16,9 +16,33 @@
     "active": 0,
     "capacity": 3,
     "items": [
-      {"id":"automation-scenes","name":"Automation","state":"BLOCKED_ROUTING_ISOLATION","task":"AUTO-002","session_open":false,"generating":false},
-      {"id":"osd-remote","name":"OSD & Remote","state":"BLOCKED_ROUTING_ISOLATION","task":"REMOTE-002","session_open":false,"generating":false},
-      {"id":"platform-services","name":"Platform Services","state":"BLOCKED_ROUTING_ISOLATION","task":"SERVICE-002","session_open":false,"generating":false}
+      {
+        "id": "automation-scenes",
+        "name": "Automation",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "AUTO-002",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "osd-remote",
+        "name": "OSD & Remote",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "REMOTE-002",
+        "session_open": false,
+        "generating": false
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "SERVICE-002",
+        "session_open": false,
+        "generating": false
+      }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T02:57:27.209581Z"
 }
