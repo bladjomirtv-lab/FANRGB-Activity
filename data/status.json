@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T13:21:56.1963749+00:00",
+    "updated_at":  "2026-09-17T13:37:50.5975996+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
@@ -26,8 +26,8 @@
                                       "state":  "IDLE",
                                       "last_activity":  "2026-09-17T10:34:34.2538495Z",
                                       "task":  "AUTO-002",
-                                      "activity":  "Session open Â· idle",
-                                      "session_open":  true,
+                                      "activity":  "Idle",
+                                      "session_open":  false,
                                       "generating":  false
                                   },
                                   {
@@ -36,8 +36,8 @@
                                       "state":  "IDLE",
                                       "last_activity":  "2026-09-17T10:35:35.8475892Z",
                                       "task":  "REMOTE-002",
-                                      "activity":  "Session open Â· idle",
-                                      "session_open":  true,
+                                      "activity":  "Idle",
+                                      "session_open":  false,
                                       "generating":  false
                                   },
                                   {
@@ -46,8 +46,8 @@
                                       "state":  "IDLE",
                                       "last_activity":  "2026-09-17T10:36:43.2818771Z",
                                       "task":  "SERVICE-002",
-                                      "activity":  "Session open Â· idle",
-                                      "session_open":  true,
+                                      "activity":  "Idle",
+                                      "session_open":  false,
                                       "generating":  false
                                   }
                               ]
