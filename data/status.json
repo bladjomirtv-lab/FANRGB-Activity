@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T14:55:55.7232201+00:00",
+    "updated_at":  "2026-09-17T14:57:30.9104125+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
