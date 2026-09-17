@@ -1,55 +1,31 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T13:52:36.7893278+00:00",
-    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
-    "blocker_active":  true,
-    "user_action_required":  false,
-    "title":  "ChatGPT cooldown",
-    "message":  "Worker-UI-Zugriffe sind vorÃ¼bergehend pausiert.",
-    "action":  "Keine Nutzeraktion erforderlich.",
-    "director":  {
-                     "name":  "Director",
-                     "state":  "IDLE",
-                     "last_activity":  "2026-09-17T13:50:02.4988208Z",
-                     "activity":  "Idle",
-                     "task":  "ORCH-REVIEW-WAKE",
-                     "session_open":  false,
-                     "generating":  false
-                 },
-    "workers":  {
-                    "active":  0,
-                    "capacity":  3,
-                    "items":  [
-                                  {
-                                      "id":  "automation-scenes",
-                                      "name":  "Automation",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:34:34.2538495Z",
-                                      "task":  "AUTO-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "osd-remote",
-                                      "name":  "OSD \u0026 Remote",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:35:35.8475892Z",
-                                      "task":  "REMOTE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "platform-services",
-                                      "name":  "Platform Services",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-17T10:36:43.2818771Z",
-                                      "task":  "SERVICE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  }
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-17T13:56:15Z",
+  "status_semantics": "ACTIVE means a visible current ChatGPT generation in a uniquely registered worker conversation; collided, unverified, or idle sessions are not active workers.",
+  "blocker_active": true,
+  "user_action_required": false,
+  "title": "Worker routing isolation blocked",
+  "message": "CHATROUTER-001 remains ACTIVE. Fresh-worker unique conversations are proven, but same-worker resume is not yet accepted because HIGH/Chat readiness failed before send. Domain dispatch remains fail-closed.",
+  "action": "No user action required. Router correction and bounded synthetic validation remain the next orchestration step; no domain prompts may be resent blindly.",
+  "director": {
+    "name": "Director",
+    "state": "IDLE",
+    "activity": "Governance review",
+    "task": "ORCH-REVIEW-WAKE",
+    "session_open": false,
+    "generating": false
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 3,
+    "items": []
+  },
+  "routing": {
+    "task": "CHATROUTER-001",
+    "state": "ACTIVE",
+    "domain_dispatch_allowed": false,
+    "fresh_worker_unique_conversations": "REAL_PASS",
+    "same_worker_resume": "BLOCKED_HIGH_CHAT_READINESS",
+    "blind_resend_allowed": false
+  }
 }
