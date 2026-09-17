@@ -8,7 +8,7 @@
   "action": "Patch first-session create_session to force a genuinely new ChatGPT conversation and reject duplicate conversation URLs against the worker registry; validate uniqueness before resuming domain dispatch.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Routing isolation governance",
     "task": "CHATROUTER-001"
   },
@@ -38,5 +38,8 @@
         "activity": "Confirmed send collided onto shared conversation; no resend"
       }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T13:20:52.583999Z"
 }
