@@ -1,13 +1,13 @@
 {
     "schema":  "rigweave-context-health-v1",
-    "generated_at":  "2026-09-17T11:46:54.0173467+00:00",
-    "status":  "critical",
-    "critical_count":  1,
+    "generated_at":  "2026-09-17T11:49:18.1529998+00:00",
+    "status":  "pass",
+    "critical_count":  0,
     "warning_count":  0,
     "metrics":  {
                     "prompt_chars":  4113,
                     "director_plan_chars":  2013,
-                    "router_chars":  8118,
+                    "router_chars":  8124,
                     "policy_chars":  2837,
                     "workflow_slim_v2_enabled":  1,
                     "deprecated_full_ssot_recovery_hits":  0,
@@ -23,16 +23,11 @@
     "audit":  {
                   "kind":  "STATIC_HYGIENE",
                   "source_ref":  "infra/windows-test-worker",
-                  "source_sha":  "11d6d591a083717b738a7c9cff39a6a36d5b25cd",
+                  "source_sha":  "67942b6b0553ef739bd71594e1d74709409fea02",
                   "path_local_non_blocking":  true,
                   "deep_audit_state":  "NONE_CONFIRMED"
               },
     "findings":  [
-                     {
-                         "severity":  "critical",
-                         "code":  "CHAT_THROTTLE_DRIFT",
-                         "message":  "Router no longer preserves the required 60s / 10-per-600s chat throttle.",
-                         "path":  "automation/rigweave/worker-router.json"
-                     }
+
                  ]
 }
