@@ -1,55 +1,43 @@
-﻿{
-    "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T10:06:01.6708885+00:00",
-    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
-    "blocker_active":  false,
-    "user_action_required":  false,
-    "title":  null,
-    "message":  null,
-    "action":  null,
-    "director":  {
-                     "name":  "Director",
-                     "state":  "IDLE",
-                     "last_activity":  "2026-09-16T22:38:59.7684309Z",
-                     "activity":  "Idle",
-                     "task":  "ORCH-REVIEW-WAKE",
-                     "session_open":  true,
-                     "generating":  false
-                 },
-    "workers":  {
-                    "active":  0,
-                    "capacity":  3,
-                    "items":  [
-                                  {
-                                      "id":  "automation-scenes",
-                                      "name":  "Automation",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:10:37.5631944Z",
-                                      "task":  "AUTO-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "osd-remote",
-                                      "name":  "OSD \u0026 Remote",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:11:38.2713807Z",
-                                      "task":  "REMOTE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  },
-                                  {
-                                      "id":  "platform-services",
-                                      "name":  "Platform Services",
-                                      "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:12:37.9628592Z",
-                                      "task":  "SERVICE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
-                                      "generating":  false
-                                  }
-                              ]
-                }
+{
+  "schema": "rigweave-activity-status-v2",
+  "updated_at": "2026-09-17T10:20:11Z",
+  "status_semantics": "ACTIVE means a valid independently isolated worker session with current attributable work; collided/shared conversations are not counted as active workers.",
+  "blocker_active": true,
+  "user_action_required": false,
+  "title": "Chat router isolation blocked",
+  "message": "CHATROUTER-001 remains ACTIVE. Multi-worker domain dispatch is fail-closed until distinct worker conversation URLs are REAL-proven. AUTO-002, REMOTE-002 and SERVICE-002 confirmed sends are not independently attributable and will not be blindly resent.",
+  "action": "Router repair/uniqueness validation only; no domain dispatch until isolation acceptance passes.",
+  "director": {
+    "name": "Director",
+    "state": "ACTIVE",
+    "activity": "Governance review and routing-blocker enforcement",
+    "task": "CHATROUTER-001"
+  },
+  "workers": {
+    "active": 0,
+    "capacity": 3,
+    "items": [
+      {
+        "id": "automation-scenes",
+        "name": "Automation & Scenes",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "AUTO-002",
+        "activity": "Confirmed send collided with shared conversation; no resend"
+      },
+      {
+        "id": "osd-remote",
+        "name": "OSD & Remote",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "REMOTE-002",
+        "activity": "Confirmed send collided with shared conversation; no resend"
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "SERVICE-002",
+        "activity": "Confirmed send collided with shared conversation; no resend"
+      }
+    ]
+  }
 }
