@@ -8,7 +8,7 @@
   "action": "Router repair/validation only; no domain dispatch until isolation acceptance.",
   "director": {
     "name": "RigWeave Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Reviewing routing isolation and completed domain handoffs",
     "task": "CHATROUTER-001"
   },
@@ -16,9 +16,30 @@
     "active": 0,
     "capacity": 3,
     "items": [
-      {"id":"automation-scenes","name":"Automation & Scenes","state":"READY_FOR_REVIEW","task":"AUTO-002","activity":"Result exists; independent routing attribution requires Director reconciliation"},
-      {"id":"osd-remote","name":"OSD & Remote","state":"READY_FOR_REVIEW","task":"REMOTE-002","activity":"Result exists; independent routing attribution requires Director reconciliation"},
-      {"id":"platform-services","name":"Platform Services","state":"READY_FOR_REVIEW","task":"SERVICE-002","activity":"Result exists; independent routing attribution requires Director reconciliation"}
+      {
+        "id": "automation-scenes",
+        "name": "Automation & Scenes",
+        "state": "READY_FOR_REVIEW",
+        "task": "AUTO-002",
+        "activity": "Result exists; independent routing attribution requires Director reconciliation"
+      },
+      {
+        "id": "osd-remote",
+        "name": "OSD & Remote",
+        "state": "READY_FOR_REVIEW",
+        "task": "REMOTE-002",
+        "activity": "Result exists; independent routing attribution requires Director reconciliation"
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "READY_FOR_REVIEW",
+        "task": "SERVICE-002",
+        "activity": "Result exists; independent routing attribution requires Director reconciliation"
+      }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T11:09:40.447614Z"
 }
