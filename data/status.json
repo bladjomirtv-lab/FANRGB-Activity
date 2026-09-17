@@ -6,14 +6,40 @@
   "title": "Chat routing isolation blocked",
   "message": "CHATROUTER-001 remains active. Domain worker dispatch is blocked until distinct worker conversation URLs are REAL-proven. The prior AUTO-002, REMOTE-002 and SERVICE-002 sends are not counted as independent active workers and must not be blindly resent.",
   "action": "Router repair/validation only; no domain dispatch until isolation acceptance.",
-  "director": {"name":"Director","state":"ACTIVE","activity":"Read-only governance review and routing-blocker enforcement","task":"ORCH-001"},
+  "director": {
+    "name": "Director",
+    "state": "RECONCILE",
+    "activity": "Read-only governance review and routing-blocker enforcement",
+    "task": "ORCH-001"
+  },
   "workers": {
     "active": 0,
     "capacity": 3,
     "items": [
-      {"id":"automation-scenes","name":"Automation","state":"BLOCKED_ROUTING_ISOLATION","task":"AUTO-002","generating":false},
-      {"id":"osd-remote","name":"OSD & Remote","state":"BLOCKED_ROUTING_ISOLATION","task":"REMOTE-002","generating":false},
-      {"id":"platform-services","name":"Platform Services","state":"BLOCKED_ROUTING_ISOLATION","task":"SERVICE-002","generating":false}
+      {
+        "id": "automation-scenes",
+        "name": "Automation",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "AUTO-002",
+        "generating": false
+      },
+      {
+        "id": "osd-remote",
+        "name": "OSD & Remote",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "REMOTE-002",
+        "generating": false
+      },
+      {
+        "id": "platform-services",
+        "name": "Platform Services",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "task": "SERVICE-002",
+        "generating": false
+      }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T11:57:34.766482Z"
 }
