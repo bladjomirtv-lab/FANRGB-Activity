@@ -9,7 +9,7 @@
   "action": "Router repair/uniqueness validation only; no domain dispatch until isolation acceptance passes.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Governance review and routing-blocker enforcement",
     "task": "CHATROUTER-001"
   },
@@ -39,5 +39,8 @@
         "activity": "Confirmed send collided with shared conversation; no resend"
       }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T10:21:04.525402Z"
 }
