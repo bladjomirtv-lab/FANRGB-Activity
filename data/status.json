@@ -8,7 +8,7 @@
   "action": "No user action required. Do not resend AUTO-002, REMOTE-002 or SERVICE-002 while routing isolation is open.",
   "director": {
     "name": "Director",
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "activity": "Routing blocker governance",
     "task": "CHATROUTER-001",
     "session_open": true,
@@ -46,5 +46,8 @@
         "generating": false
       }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T01:18:08.987072Z"
 }
