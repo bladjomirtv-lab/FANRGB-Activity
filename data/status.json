@@ -7,7 +7,7 @@
   "message": "CHATROUTER-001 is ACTIVE. Multi-worker REAL evidence showed distinct worker profiles resolving to the same ChatGPT conversation, so domain dispatch is fail-closed until unique worker conversations are proven.",
   "action": "No user action required. Do not resend AUTO-002, REMOTE-002 or SERVICE-002 while routing isolation is unresolved.",
   "director": {
-    "state": "ACTIVE",
+    "state": "RECONCILE",
     "task": "CHATROUTER-001 governance",
     "activity": "Routing isolation blocker enforced"
   },
@@ -15,9 +15,30 @@
     "active": 0,
     "capacity": 3,
     "items": [
-      {"id":"automation-scenes","task":"AUTO-002","state":"BLOCKED_ROUTING_ISOLATION","send_confirmed":true,"independent_session_accepted":false},
-      {"id":"osd-remote","task":"REMOTE-002","state":"BLOCKED_ROUTING_ISOLATION","send_confirmed":true,"independent_session_accepted":false},
-      {"id":"platform-services","task":"SERVICE-002","state":"BLOCKED_ROUTING_ISOLATION","send_confirmed":true,"independent_session_accepted":false}
+      {
+        "id": "automation-scenes",
+        "task": "AUTO-002",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "send_confirmed": true,
+        "independent_session_accepted": false
+      },
+      {
+        "id": "osd-remote",
+        "task": "REMOTE-002",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "send_confirmed": true,
+        "independent_session_accepted": false
+      },
+      {
+        "id": "platform-services",
+        "task": "SERVICE-002",
+        "state": "BLOCKED_ROUTING_ISOLATION",
+        "send_confirmed": true,
+        "independent_session_accepted": false
+      }
     ]
-  }
+  },
+  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
+  "runtime_feed_sanitized": true,
+  "runtime_feed_sanitized_at": "2026-09-17T01:33:49.074794Z"
 }
