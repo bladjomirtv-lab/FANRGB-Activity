@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T11:51:15.7110122+00:00",
+    "updated_at":  "2026-09-17T11:57:10.7690421+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
@@ -10,7 +10,7 @@
     "director":  {
                      "name":  "Director",
                      "state":  "IDLE",
-                     "last_activity":  "2026-09-17T11:51:09.4792032Z",
+                     "last_activity":  "2026-09-17T11:54:28.8644649Z",
                      "activity":  "Idle",
                      "task":  "ORCH-REVIEW-WAKE",
                      "session_open":  false,
