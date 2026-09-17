@@ -1,60 +1,55 @@
-{
-  "schema": "rigweave-activity-status-v3",
-  "updated_at": "2026-09-17T12:48:56.1982234+00:00",
-  "status_semantics": "STALE runtime snapshot: old ACTIVE states are not treated as current work.",
-  "blocker_active": false,
-  "user_action_required": false,
-  "title": null,
-  "message": null,
-  "action": null,
-  "director": {
-    "name": "Director",
-    "state": "IDLE",
-    "last_activity": "2026-09-17T11:57:12.5750409Z",
-    "activity": "Idle",
-    "task": null,
-    "session_open": false,
-    "generating": false
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "items": [
-      {
-        "id": "automation-scenes",
-        "name": "Automation",
-        "state": "IDLE",
-        "last_activity": "2026-09-17T10:34:34.2538495Z",
-        "task": "AUTO-002",
-        "activity": "Session open Â· idle",
-        "session_open": true,
-        "generating": false
-      },
-      {
-        "id": "osd-remote",
-        "name": "OSD & Remote",
-        "state": "IDLE",
-        "last_activity": "2026-09-17T10:35:35.8475892Z",
-        "task": "REMOTE-002",
-        "activity": "Session open Â· idle",
-        "session_open": true,
-        "generating": false
-      },
-      {
-        "id": "platform-services",
-        "name": "Platform Services",
-        "state": "IDLE",
-        "last_activity": "2026-09-17T10:36:43.2818771Z",
-        "task": "SERVICE-002",
-        "activity": "Session open Â· idle",
-        "session_open": true,
-        "generating": false
-      }
-    ]
-  },
-  "runtime_feed_stale": true,
-  "stale_detected_at": "2026-09-17T13:02:15.903071Z",
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-17T13:02:25.371654Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-17T13:04:39.3564486+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  false,
+    "user_action_required":  false,
+    "title":  null,
+    "message":  null,
+    "action":  null,
+    "director":  {
+                     "name":  "Director",
+                     "state":  "IDLE",
+                     "last_activity":  "2026-09-17T11:57:12.5750409Z",
+                     "activity":  "Idle",
+                     "task":  null,
+                     "session_open":  false,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  3,
+                    "items":  [
+                                  {
+                                      "id":  "automation-scenes",
+                                      "name":  "Automation",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:34:34.2538495Z",
+                                      "task":  "AUTO-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "osd-remote",
+                                      "name":  "OSD \u0026 Remote",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:35:35.8475892Z",
+                                      "task":  "REMOTE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-17T10:36:43.2818771Z",
+                                      "task":  "SERVICE-002",
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
+                                      "generating":  false
+                                  }
+                              ]
+                }
 }
