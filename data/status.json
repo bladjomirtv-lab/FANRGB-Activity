@@ -1,44 +1,55 @@
-{
-  "schema": "rigweave-activity-status-v2",
-  "updated_at": "2026-09-17T01:32:40Z",
-  "blocker_active": true,
-  "user_action_required": false,
-  "title": "Worker routing isolation blocked",
-  "message": "CHATROUTER-001 is ACTIVE. Multi-worker REAL evidence showed distinct worker profiles resolving to the same ChatGPT conversation, so domain dispatch is fail-closed until unique worker conversations are proven.",
-  "action": "No user action required. Do not resend AUTO-002, REMOTE-002 or SERVICE-002 while routing isolation is unresolved.",
-  "director": {
-    "state": "RECONCILE",
-    "task": "CHATROUTER-001 governance",
-    "activity": "Routing isolation blocker enforced"
-  },
-  "workers": {
-    "active": 0,
-    "capacity": 3,
-    "items": [
-      {
-        "id": "automation-scenes",
-        "task": "AUTO-002",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "send_confirmed": true,
-        "independent_session_accepted": false
-      },
-      {
-        "id": "osd-remote",
-        "task": "REMOTE-002",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "send_confirmed": true,
-        "independent_session_accepted": false
-      },
-      {
-        "id": "platform-services",
-        "task": "SERVICE-002",
-        "state": "BLOCKED_ROUTING_ISOLATION",
-        "send_confirmed": true,
-        "independent_session_accepted": false
-      }
-    ]
-  },
-  "runtime_feed_authority": "Assignment/DAG status is not runtime generation evidence. Activity ACTIVE is reserved for trusted runtime-v3 generation evidence.",
-  "runtime_feed_sanitized": true,
-  "runtime_feed_sanitized_at": "2026-09-17T01:33:49.074794Z"
+﻿{
+    "schema":  "rigweave-activity-status-v3",
+    "updated_at":  "2026-09-17T01:46:53.5355830+00:00",
+    "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
+    "blocker_active":  true,
+    "user_action_required":  false,
+    "title":  "ChatGPT cooldown",
+    "message":  "Worker-UI-Zugriffe sind vorÃ¼bergehend pausiert.",
+    "action":  "Keine Nutzeraktion erforderlich.",
+    "director":  {
+                     "name":  "Director",
+                     "state":  "COOLDOWN",
+                     "last_activity":  "2026-09-16T22:38:59.7684309Z",
+                     "activity":  "Cooldown",
+                     "task":  "ORCH-REVIEW-WAKE",
+                     "session_open":  true,
+                     "generating":  false
+                 },
+    "workers":  {
+                    "active":  0,
+                    "capacity":  3,
+                    "items":  [
+                                  {
+                                      "id":  "automation-scenes",
+                                      "name":  "Automation",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:10:37.5631944Z",
+                                      "task":  "AUTO-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "osd-remote",
+                                      "name":  "OSD \u0026 Remote",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:11:38.2713807Z",
+                                      "task":  "REMOTE-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  },
+                                  {
+                                      "id":  "platform-services",
+                                      "name":  "Platform Services",
+                                      "state":  "IDLE",
+                                      "last_activity":  "2026-09-16T23:12:37.9628592Z",
+                                      "task":  "SERVICE-002",
+                                      "activity":  "Idle",
+                                      "session_open":  false,
+                                      "generating":  false
+                                  }
+                              ]
+                }
 }
