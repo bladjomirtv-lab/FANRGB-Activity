@@ -1,6 +1,6 @@
 ﻿{
     "schema":  "rigweave-activity-status-v3",
-    "updated_at":  "2026-09-17T10:31:18.0324210+00:00",
+    "updated_at":  "2026-09-17T10:36:56.7645138+00:00",
     "status_semantics":  "ACTIVE means a visible current ChatGPT generation in that registered worker window; an open idle session is IDLE.",
     "blocker_active":  false,
     "user_action_required":  false,
@@ -24,30 +24,30 @@
                                       "id":  "automation-scenes",
                                       "name":  "Automation",
                                       "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:10:37.5631944Z",
+                                      "last_activity":  "2026-09-17T10:34:34.2538495Z",
                                       "task":  "AUTO-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
                                       "generating":  false
                                   },
                                   {
                                       "id":  "osd-remote",
                                       "name":  "OSD \u0026 Remote",
                                       "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:11:38.2713807Z",
+                                      "last_activity":  "2026-09-17T10:35:35.8475892Z",
                                       "task":  "REMOTE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
                                       "generating":  false
                                   },
                                   {
                                       "id":  "platform-services",
                                       "name":  "Platform Services",
                                       "state":  "IDLE",
-                                      "last_activity":  "2026-09-16T23:12:37.9628592Z",
+                                      "last_activity":  "2026-09-17T10:36:43.2818771Z",
                                       "task":  "SERVICE-002",
-                                      "activity":  "Idle",
-                                      "session_open":  false,
+                                      "activity":  "Session open Â· idle",
+                                      "session_open":  true,
                                       "generating":  false
                                   }
                               ]
